@@ -1,0 +1,343 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Roboto:wght@100&family=Schibsted+Grotesk&display=swap');
+
+* {
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Schibsted Grotesk', sans-serif;
+    padding: 0;
+    margin: 0;
+    border: none;
+    outline: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+a {
+    color: white;
+}
+
+html {
+    font-size: 62%;
+    overflow-x: hidden;
+}
+
+body {
+    background: #0b141e;
+    color: #fff;
+
+}
+
+/*Header section*/
+.header {
+    background: rgba(0, 0, 0, 0.9);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1;
+}
+
+.logo {
+    font-size: 2.2rem;
+    font-weight: 600;
+    color: aqua;
+}
+
+.menubar a {
+    font-size: 1.5rem;
+    margin-left: 3.5rem;
+    transition: 0.4s ease;
+}
+
+.menubar a:hover {
+    color: aqua;
+}
+
+#menu-btn {
+    font-size: 3rem;
+    display: none;
+}
+
+
+section {
+    padding: 10rem 10%;
+    min-height: 100vh;
+}
+
+/*Home SECTION*/
+.home {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.bio h3 {
+    font-size: 2.5rem;
+}
+
+span {
+    color: aqua;
+}
+
+.bio h1 {
+    font-size: 3.5rem;
+    line-height: 1.4;
+}
+
+.bio p {
+    font-size: 1.5rem;
+    padding: 1rem 0;
+}
+
+.profile {
+    width: 20vw;
+    border-radius: 45%;
+    animation: float 5s ease-in-out infinite;
+}
+
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(2.5rem);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.socials a {
+    width: 3.8rem;
+    height: 3.8rem;
+    font-size: 2.2rem;
+    margin: 1rem 1rem 2rem 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: 0.4s ease;
+}
+
+.socials a:hover {
+    color: aqua;
+    box-shadow: 0 0 1rem aqua;
+
+}
+
+.btn {
+    display: inline-block;
+    background: aqua;
+    margin: 2rem 0;
+    padding: 1rem 2.5rem;
+    border-radius: 1.3rem;
+    font-size: 1.3rem;
+    color: #000;
+    font-weight: 600;
+    transition: 0.5s ease;
+}
+
+.btn:hover {
+    color: aqua;
+    background-color: #000;
+    box-shadow: 0 0 1rem aqua;
+}
+
+/*about section*/
+.about {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.headings {
+    font-size: 3.3rem;
+    text-align: center;
+    margin: 4rem 0;
+}
+
+.about-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+}
+
+.aboutresume h3 {
+    font-size: 2.3rem;
+}
+
+.about-text {
+    font-size: 1.8rem;
+}
+
+
+
+
+
+
+
+/*skills section*/
+
+.skills {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.skill-items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+}
+
+.skill-types {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    cursor: pointer;
+    transition: 1s all cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.skill-types:hover {
+    border-radius: 1rem solid;
+    transform: scale(1.05);
+}
+
+.skill-types .bx {
+    font-size: 8rem;
+    transition: 0.4s ease;
+}
+
+.skill-types .bx:hover {
+    color: aqua;
+
+}
+
+.skill-items h3 {
+    font-size: 2.5rem;
+    font-weight: 200;
+}
+
+/*contacts section*/
+.contact {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+form {
+    display: grid;
+    row-gap: 1rem;
+}
+
+form input,
+textarea {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.5rem;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 1rem;
+    resize: none;
+}
+
+/*footer section*/
+.footer {
+    padding: 2rem 10%;
+    text-align: center;
+    font-size: 1rem;
+}
+
+hr {
+    margin: 1rem;
+    border-bottom: thin solid #fff;
+}
+
+
+
+
+
+
+/*Responsive section*/
+@media (max-width:1200px) {
+    html {
+        font-size: 60%;
+    }
+}
+
+@media (max-width:992px) {
+    .header {
+        padding: 2rem 4%;
+    }
+
+    .home .pic img {
+        width: 40vw;
+
+    }
+}
+
+@media (max-width:767px) {
+    #menu-btn{
+        display: block;
+    }
+
+    .menubar {
+        width: 100%;
+        position: absolute;
+        left: 0;
+        top: 100%;
+        background: rgba(0, 0, 0, 0.9);
+        display: none;
+    }
+
+    .menubar.active {
+        display: block;
+    }
+
+    .menubar a {
+        display: block;
+        margin: 2rem;
+        font-size: 2rem;
+    }
+    .home,.about-item{
+        flex-direction: column;
+    }
+    .home img{
+        width: 80vw;
+    }
+    .headings{
+        font-size: 3rem;
+    }
+    .skill-items{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+
+@media (max-width:620px) {
+    .skill-items{
+        grid-template-columns: repeat(1,1fr);
+    }
+    .headings{
+        font-size: 2.7rem;
+    }
+}
+
+@media (max-width:450px) {
+    html{
+        font-size: 50%;
+    }
+}

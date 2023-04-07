@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MARSHAL WEB</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+        img[src*="https://cdn.000webhost.com/000webhost/logo/footer-powered-by-000webhost-white2.png"] {
+            display: none;
+        }
+    </style>
+    <!--link here-->
+</head>
+
+<body>
+    <!---HEADER SECTION-->
+    <header class="header">
+        <a href="#" class="logo">Marshal</a>
+        <i class='bx bx-menu' id="menu-btn"></i>
+        <nav class="menubar">
+            <a href="#home">HOME</a>
+            <a href="#about">ABOUT</a>
+            <a href="#skills">SKILLS</a>
+            <a href="#contact">CONTACT</a>
+        </nav>
+    </header>
+    <!---Home SECTION-->
+    <section class="home" id="home">
+        <div class="bio">
+            <h3>This Is</h3>
+            <h1>Marshal Tamang</h1>
+            <h3>I am a <span class="animated-text">Student</span></h3>
+            <p>
+                HELLO, I am Marshal Tamang from Bhaktapur,Nepal .<br> I am currently studying Comoputer Science in
+                Pentagon Int'l College.
+                <br>IT graduate major in computer programing with a background in HTML, CSS, PHP, JS.<br>
+                Highly analytical, motivated and skilled at solving programming problems. Can work well both
+                independently and in a team.
+
+            </p>
+            <div class="socials">
+                <a href="#"><i class='bx bxl-linkedin'></i></a>
+                <a href="#"><i class='bx bxl-instagram'></i></a>
+                <a href="#"><i class='bx bxl-facebook'></i></a>
+                <a href="#"><i class='bx bxl-tiktok'></i></a>
+            </div>
+            <a href="#contact" class="btn">LET'S TALK</a>
+        </div>
+        <div class="pic">
+            <img src="profile.png" class="profile" alt="Marshal photo">
+        </div>
+    </section>
+
+
+    <!---about SECTION-->
+    <section class="about" id="about">
+        <div class="headings">
+            <h2>ABOUT <span>ME</span></h2>
+        </div>
+        <div class="about-item">
+            <div class="aboutresume">
+                <h3>WEB DESIGNER & STUDENT</h3>
+                <a href="#" class="btn">DOWNLOAD RESUME</a>
+            </div>
+            <div class="about-text">
+                <p>Strong in design and integration with intuitive problem-solving skills.Passionate about implementing
+                    and launching new projects.
+                    <br>
+                    Ability to translate business requirements into technical solutions.
+                    Looking to start the career as an entry-level software engineer with a reputed firm driven by
+                    technology.<br>
+                    Looking to start the career as an entry-level software engineer with a reputed firm driven by
+                    technology.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <!---skills SECTION-->
+    <section class="skills" id="skills">
+        <div class="headings">
+            <h2>MY <span>SKILLS</span></h2>
+        </div>
+
+
+        <div class="skill-items">
+            <div class="skill-types">
+                <i class='bx bxl-html5'></i>
+                <h3>HTML</h3>
+            </div>
+            <div class="skill-types">
+                <i class='bx bxs-file-css'></i>
+                <h3>CSS</h3>
+            </div>
+            <div class="skill-types">
+                <i class='bx bxl-javascript'></i>
+                <h3>JAVASCRIPT</h3>
+            </div>
+            <div class="skill-types">
+                <i class='bx bxl-python'></i>
+                <h3>PYTHON</h3>
+            </div>
+            <div class="skill-types">
+                <i class='bx bxl-php'></i>
+                <h3>PHP</h3>
+            </div>
+
+        </div>
+    </section>
+
+    <!---contact SECTION-->
+    <section class="contact" id="contact">
+        <div class="headings">
+            <h2>CONTACT <span>ME</span></h2>
+        </div>
+        <form  method="POST" class="form">
+
+
+            <input type="text" placeholder="Your Name" name="username">
+
+
+            <input type="email" placeholder="Your Email" name="email">
+
+
+
+            <textarea name="comment" cols="30" rows="6" placeholder="Your Message"></textarea name="comment">
+
+
+            <input type="submit" class="btn" value="Send Message" name="submit">
+
+        </form>
+    </section>
+
+    <!---footerSECTION-->
+    <footer class="footer">
+        <hr>
+        <p>
+            Copyright &copy; 1997 MARSHAL TAMANG
+            <br>All Rights Reserved
+        </p>
+
+    </footer>
+
+    <!---scroll SECTION-->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <!---typing animation SECTION-->
+
+    <script src="https://unpkg.com/typed.js@2.0.15/dist/typed.umd.js"></script>
+
+    <!---js SECTION-->
+
+    <script src="script.js"></script>
+</body>
+<?php
+error_reporting(0);
+$servername = "localhost";
+$username = "root";
+$password = "";
+$db_name = "detail";
+
+//establisg connection
+$conn = mysqli_connect($servername, $username, $password, $db_name);
+
+$un = $_POST['username'];
+
+$em = $_POST['email'];
+
+if(isset($_POST["comment"])){
+$text = $_POST["comment"];}
+
+$query = "INSERT INTO info VALUES ('$un','$em','$text' )";
+$data = mysqli_query($conn,$query);
+if($data){
+    echo"Message sent.";
+}
+?>
+</html>
