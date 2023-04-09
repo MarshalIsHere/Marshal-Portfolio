@@ -118,17 +118,17 @@
         <div class="headings">
             <h2>CONTACT <span>ME</span></h2>
         </div>
-        <form  method="POST" class="form">
+        <form action="https://formsubmit.co/a74612236b797337e49d9cfb6f795cb5" method="POST" class="form">
 
 
-            <input type="text" placeholder="Your Name" name="username">
+            <input type="text" placeholder="Your Name" name="Name">
 
 
-            <input type="email" placeholder="Your Email" name="email">
+            <input type="email" placeholder="Your Email" name="Email">
 
 
 
-            <textarea name="comment" cols="30" rows="6" placeholder="Your Message"></textarea name="comment">
+            <textarea name="Message" cols="30" rows="6" placeholder="Your Message"></textarea name="comment">
 
 
             <input type="submit" class="btn" value="Send Message" name="submit">
@@ -156,27 +156,4 @@
 
     <script src="script.js"></script>
 </body>
-<?php
-error_reporting(0);
-$servername = "localhost";
-$username = "root";
-$password = "";
-$db_name = "detail";
-
-//establisg connection
-$conn = mysqli_connect($servername, $username, $password, $db_name);
-
-$un = $_POST['username'];
-
-$em = $_POST['email'];
-
-if(isset($_POST["comment"])){
-$text = $_POST["comment"];}
-
-$query = "INSERT INTO info VALUES ('$un','$em','$text' )";
-$data = mysqli_query($conn,$query);
-if($data){
-    echo"Message sent.";
-}
-?>
 </html>
